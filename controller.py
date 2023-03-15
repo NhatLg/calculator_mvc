@@ -9,6 +9,10 @@ class Controller:
     def main(self):
         self.view.main()
 
+    def on_btn_click(self, caption):
+        result = self.model.calculate(caption)
+
+        self.view.value_var.set(result)
 
 if __name__ == "__main__":
     calculator = Controller()

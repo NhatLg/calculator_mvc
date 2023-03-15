@@ -49,6 +49,6 @@ class View(tk.Tk):
                 frm.pack()
                 buttons_in_row = 0
 
-            btn = ttk.Button(frm, text=caption)
+            btn = ttk.Button(frm, text=caption, command=lambda button=caption: self.controller.on_btn_click(button))
             btn.pack(side='left')
             buttons_in_row += 1
